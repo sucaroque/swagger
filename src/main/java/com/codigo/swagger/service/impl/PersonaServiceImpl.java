@@ -58,4 +58,9 @@ public class PersonaServiceImpl implements PersonaService {
     public PersonaEntity borrar(Long id) {
         return null;
     }
+
+    @Override
+    public List<PersonaEntity> buscarHistorico() {
+        return null;
+    }
 }

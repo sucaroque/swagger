@@ -47,4 +47,8 @@ public class PersonaController {
     public ResponseEntity<PersonaEntity> eliminar(@PathVariable long id) {
         return ResponseEntity.ok(personaService2.borrar(id));
     }
+    @GetMapping("/historico")
+    public ResponseEntity<List<PersonaEntity>> buscarHistorico() {
+        return ResponseEntity.ok(personaService2.buscarHistorico());
+    }
 }

@@ -12,4 +12,5 @@ public interface PersonaService {
     List<PersonaEntity> buscarTodos();
     PersonaEntity actualizar(Long id, PersonaEntity personaEntity);
     PersonaEntity borrar(Long id);
+    List<PersonaEntity> buscarHistorico();
 }

@@ -49,4 +49,9 @@ public class PersonaServiceImpl2 implements PersonaService {
         }
         return null;
     }
+
+    @Override
+    public List<PersonaEntity> buscarHistorico() {
+        return personaRepository.findAll().stream().toList();
+    }
 }
