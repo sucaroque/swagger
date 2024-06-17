@@ -63,4 +63,9 @@ public class PersonaServiceImpl implements PersonaService {
     public List<PersonaEntity> buscarHistorico() {
         return null;
     }
+
+    @Override
+    public PersonaEntity activarEliminado(Long id) {
+        return null;
+    }
 }

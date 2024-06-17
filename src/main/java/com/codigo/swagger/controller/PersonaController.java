@@ -79,4 +79,8 @@ public class PersonaController {
     public ResponseEntity<List<PersonaEntity>> buscarHistorico() {
         return ResponseEntity.ok(personaService2.buscarHistorico());
     }
+    @PatchMapping("/activar/{id}")
+    public ResponseEntity<PersonaEntity> activarEliminado(@PathVariable long id) {
+        return ResponseEntity.ok(personaService2.activarEliminado(id));
+    }
 }

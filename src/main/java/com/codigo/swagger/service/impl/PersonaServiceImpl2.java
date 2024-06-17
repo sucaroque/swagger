@@ -54,4 +54,17 @@ public class PersonaServiceImpl2 implements PersonaService {
     public List<PersonaEntity> buscarHistorico() {
         return personaRepository.findAll().stream().toList();
     }
+
+    @Override
+    public PersonaEntity activarEliminado(Long id) {
+        Optional<PersonaEntity> personaRecuperada = personaRepository.findById(id);
+        if (personaRecuperada.isPresent()) {
+            PersonaEntity persona = personaRecuperada.get();
+            persona.setEstado(1);
+            persona.setDateUpdate(new Timestamp(System.currentTimeMillis()));
+            persona.setUsuaUpdate(Constantes.USUARIO_SISTEMA);
+            return personaRepository.save(persona);
+        }
+        return null;
+    }
 }
